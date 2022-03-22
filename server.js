@@ -17,6 +17,12 @@ app.get('/blackjack', function(req, res) {
     res.sendFile(path.join(__dirname, '/BlackJack App/index.html'));
   });
 
+  app.get('/counter', function(req, res) {
+    //res.send("Olá");
+    app.use(express.static(path.join(__dirname, 'Counter App')));
+    res.sendFile(path.join(__dirname, '/Counter App/index.html'));
+  });
+
 
 
 
